@@ -1,0 +1,13 @@
+{% extends 'application1/layout.html' %}
+
+{% block body %}
+    <h1>Listado de tareas</h1>
+    <ul>
+    {% for tarea in tareas %}
+        <li>{{tarea}}</li>
+    {% endfor %}
+</ul>
+<!-- Se toma el name del path -->
+<a href="{% url 'add' %}">Agregar tarea</a>
+
+{% endblock %}
